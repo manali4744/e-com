@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+<head>
+	<title>Order</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card h-50 w-50">
+				<div class="card-body">
+					<div style=" background-color : white  ">
+					<h2 class="card-title" style="text-align : center ; color : #74cfbf; font-family: 'Times New Roman', Times, serif; ">Order-Detail</h2>
+					</div>
+					<p class="card-text" >
+						<ul class = 'justify-content-evenly' style="list-style-type: none;">
+							<li><p class="order-display">Customer : {{ customer }}</p></li>
+							<li><p class="order-display">Phone : {{ phone }}</p></li>
+							<li><p class="order-display">Email : {{ email }}</p></li>
+							<li><p class="order-display">Product : {{ name }}</p></li>
+							<li><p class="order-display">Quantity : {{ quantity }}</p></li>
+							<li><p class="order-display">Price : {{ price }}</p></li>
+							<li><p class="order-display">Total : {{ payment_amount }}</p></li>
+						</ul>
+					</p>
+					<div class="d-flex justify-content-center mt-3 login_container">
+						<input class="btn login_btn" type="submit" value="Payment">
+					  </div>
+				</div>
+				{% for message in messages %}
+					<p id = 'messages'>{{message}}</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: white !important;
+  }
+
+.div1{
+    background-color: #7abecc;
+    width:100%; 
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #74cfbf;
+    color: white;
+    text-align: center;
+ }
+
+.container-fluid{
+    background-color:#74cfbf;
+}
+
+.btn {
+    background: #33ccff !important;
+    color: white !important;
+}
+.btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.style-icon-menu {
+    background: white !important;
+    color: #33ccff !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+

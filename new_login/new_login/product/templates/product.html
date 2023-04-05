@@ -1,0 +1,29 @@
+{% extends 'product_nav.html' %}
+{% load static %}
+{% block product %}
+
+<div class='row card-group  justify-content-evenly'>
+    {% for x in item %}
+      <!-- <div class="col-sm-2 mt-5"> -->
+        <div class="col-sm-2 justify-content-sm-evenly mt-5 m-lg-5">
+        <div class="card h-100" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ x.name }}</h5>
+            <p class="card-text" >
+            {{ x.description }}
+            </p>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="hidden" name="product_id" id="product_id" value="{{ x.id }}">
+                <input type="submit" value="Detail">
+            </form>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Created at {{x.date_created}}</small>
+            <small class="text-muted">Updated at {{x.update_at}}</small>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+{% endblock %}

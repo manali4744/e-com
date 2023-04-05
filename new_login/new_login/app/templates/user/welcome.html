@@ -1,0 +1,46 @@
+{% extends 'user/navbar.html' %}
+
+{% load static %}
+{% block hello %}
+<div class="dropdown">
+	<button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  <i class="fa fa-bars fa-2xl"></i>
+	</button>
+	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		<a class="dropdown-item" style="text-transform: uppercase;">{{name}}</a>
+		<a class="dropdown-item" href="#">Cart</a>
+		<a class="dropdown-item" href="#">Setting</a>
+		<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+	</div>
+  </div>
+
+{% endblock %}
+{% block mymessage %}
+<div class="container">
+	<table class="table mt-10">
+		<thead class="thead-dark">
+		  <tr>
+			<th scope="col">Product</th>
+			<th scope="col">Price</th>
+			<th scope="col">Status</th>
+		  </tr>
+		</thead>
+		<tbody>
+		{% for x in order %}
+		  <tr>
+			<td>{{x.product}}</td>
+			<td>{{x.product.price}}</td>
+			<td>{{x.status}}</td>
+		  </tr>
+		{% endfor %}
+		</tbody>
+	  </table>	
+</div>
+
+{% endblock %} 
+
+{% block logout %}
+<li class="nav-item">
+	<a class="nav-link" href="{% url 'product' %}" style="color: white;">Product</a>
+  </li>
+{% endblock %}

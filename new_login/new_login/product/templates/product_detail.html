@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>home</title>
+    <link rel="stylesheet" href="{% static 'style_pro.css' %}">
+  </head>
+  <body>
+    <main class="container">
+
+      <!-- Left Column / Headphones Image -->
+      <div class="left-column">
+        <img src="{{product.product_img.url}}" alt="">
+      </div>
+      <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <span>{{product.name}}</span>
+          <h1>{{ product.category_brand}}</h1>
+          <p> {{ product.description}}</p>
+        </div>
+
+        <div class="product-price">
+          <span>{{ product.price}}$</span>
+          <a href="{% url 'cart' product.id %}" class="cart-btn">Add to cart</a>
+          <span></span>
+          <a href="{% url 'Create_Order' product.id%}" class="cart-btn">Buy Now</a>
+        </div>
+
+      </div>
+    </main>
+  </body>
+
+
+

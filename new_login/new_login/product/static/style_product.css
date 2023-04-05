@@ -1,0 +1,44 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: white !important;
+  }
+
+body{
+    background: white;
+}
+
+.btn {
+  background: white !important;
+  color: #1b252a !important;
+}
+.btn:focus {
+  box-shadow: none !important;
+  outline: 0px !important;
+}
+
+.div-color{
+  background-color: gray !important;
+}
+
+.container-fluid{
+  background-color: #74cfbf !important;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 20PX;
+  width: 100%;
+  color: gray;
+  text-align: center;
+}
+
+.style-icon-menu {
+  background: #f7ba5b !important;
+  color: white !important;
+  border: 0 !important;
+  border-radius: 0.25rem 0 0 0.25rem !important;
+}
