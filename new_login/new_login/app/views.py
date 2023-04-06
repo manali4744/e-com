@@ -12,7 +12,7 @@ from django.contrib.auth import login, logout
 
 def Send_OTP(OTP):
     account_sid = "AC0658569caf59ad3eb3722f28b9795726"
-    auth_token  = "7c98e105562914eb71b7bb22813c8e52"
+    auth_token  = "f76e089823c608b69a201ae760f3b0c8"
     client = Client(account_sid, auth_token)
     message = client.messages.create(
     body= OTP,

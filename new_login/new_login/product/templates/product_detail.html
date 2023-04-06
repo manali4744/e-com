@@ -23,8 +23,12 @@
 
         <div class="product-price">
           <span>{{ product.price}}$</span>
-          <a href="{% url 'cart' product.id %}" class="cart-btn">Add to cart</a>
-          <span></span>
+          {% if product in product_cart%}
+            <a id="cart-remove" href="{% url 'cart-remove' product.id %}" class="cart-btn">Added</a>
+          {% else %}
+          <a id="cart-add" href="{% url 'cart' product.id %}" class="cart-btn">Add to cart</a>
+          {% endif %}
+            <span></span>
           <a href="{% url 'Create_Order' product.id%}" class="cart-btn">Buy Now</a>
         </div>
 

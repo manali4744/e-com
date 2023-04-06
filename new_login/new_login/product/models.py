@@ -41,7 +41,7 @@ class Cart(models.Model):
     cart = models.ManyToManyField(Product)
 
     def __str__(self) -> str:
-        return str(self.customer.name)
+        return str(self.customer)
     
 
 
